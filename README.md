@@ -1,1 +1,1 @@
-# breast-cancer-prediction
+# heart-disease-prediction
