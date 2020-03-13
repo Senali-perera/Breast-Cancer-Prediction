@@ -1,0 +1,221 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Heart Disease Prediction</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+		<!-- Favicons -->
+		<link href="static/assets/img/favicon.png" rel="icon">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+
+		<!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="static/assets/plugins/fontawesome/css/fontawesome.min.css">
+		<link rel="stylesheet" href="static/assets/plugins/fontawesome/css/all.min.css">
+
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="static/assets/css/style.css">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="static/assets/js/html5shiv.min.js"></script>
+			<script src="static/assets/js/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+    <body>
+        <div class="main-wrapper">
+            <!-- Header -->
+            <header class="header">
+                <nav class="navbar navbar-expand-lg header-nav">
+                    <div class="main-menu-wrapper">
+                        <ul class="main-nav">
+                            <li class="active">
+                                <a href="/">Heart Disease Prediction</a>
+                            </li>
+                            <li>
+                                <a href="/adminlogin" target="_blank">Admin</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="nav header-navbar-rht">
+                        <li class="nav-item contact-item">
+                            <div class="header-contact-img">
+                                <i class="far fa-hospital"></i>
+                            </div>
+                            <div class="header-contact-detail">
+                                <p class="contact-header">Contact</p>
+                                <p class="contact-info-header"> +94 123-456789</p>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- /Header -->
+
+
+            <div class="row justify-content-md-center">
+                <div div class="col-2"></div>
+                <div class="col-8">
+                    <form action="/result" method="POST">
+                        <div class="row-md-2">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="gen">Gender :</label>
+                                <select class="form-control" id="gen" name="gen">
+                                    <option value="0">Female</option>
+                                    <option value="1">Male</option>
+                                    </select>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="age">Age :</label>
+                                        <input type="number" min="0" placeholder="Enter Age" id="age" class="form-control" name="age">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="smoke">Current Smorker :</label>
+                                        <select class="form-control" id="smoke" name="smoke">
+                                             <option value="0">Non-smoker</option>
+                                            <option value="1">Smoker</option>
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="cigarate">Cigarates per day:</label>
+                                        <input type="number" min="0" placeholder="Enter the value" class="form-control" id="cigarate" name="cigarate">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="hyper">The patient was hypertensive :</label>
+                                        <select class="form-control" id="hyper" name="hyper" >
+                                            <option value="0">No</option>
+                                            <option value="1">YES</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="chole">Total Cholesterol level :</label>
+                                        <input type="number" min="0" placeholder="Enter the value" class="form-control" id="chole" name="chole">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="blood">Systolic blood pressure :</label>
+                                        <input type="number" min="0" placeholder="Enter the value" class="form-control" id="blood" name="blood" >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="diastolic">Diastolic blood pressure :</label>
+                                        <input type="number" min="0" placeholder="Enter the value" class="form-control" id="diastolic" name="diastolic">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="mass">Body Mass Index :</label>
+                                        <input type="number" min="0" placeholder="Enter the value" class="form-control" id="mass" name="mass">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="heart">Heart rate :</label>
+                                        <input type="number" min="0" placeholder="Enter the value" class="form-control" id="heart" name="heart" >
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="glucose">Glucose Level :</label>
+                                        <input type="number" min="0" placeholder="Enter the value" class="form-control" id="glucose" name="glucose">
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="submit" value="Submit" class="btn btn-primary">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+
+                <!-- Footer Top -->
+                <div class="footer-top">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-8"></div>
+
+                            <div class="col-lg-3 col-md-6">
+
+                                <!-- Footer Widget -->
+                                <div class="footer-widget footer-contact">
+                                    <h2 class="footer-title">Contact Us</h2>
+                                    <div class="footer-contact-info">
+                                        <div class="footer-address">
+                                            <span><i class="fas fa-map-marker-alt"></i></span>
+                                            <p> 3556  Beech Street, Galle road,<br> Sri Lanka, CA 94108 </p>
+                                        </div>
+                                        <p>
+                                            <i class="fas fa-phone-alt"></i>
+                                            +94 123-456789
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /Footer Widget -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /Footer Top -->
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="container-fluid">
+
+                        <!-- Copyright -->
+                        <div class="copyright">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-7">
+
+                                    <!-- Copyright Menu -->
+                                    <div class="copyright-menu">
+                                        <ul class="policy-menu">
+                                            <li><a href="term-condition.html">Terms and Conditions</a></li>
+                                            <li><a href="privacy-policy.html">Policy</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- /Copyright Menu -->
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Copyright -->
+
+                    </div>
+                </div>
+                <!-- /Footer Bottom -->
+
+            </footer>
+            <!-- /Footer -->
+        </div>
+    </body>
+</html>
+

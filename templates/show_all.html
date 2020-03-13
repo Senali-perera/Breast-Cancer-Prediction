@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- doccure/booking-success.html  30 Nov 2019 04:12:16 GMT -->
+<head>
+		<meta charset="utf-8">
+		<title>Success</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+		<!-- Favicons -->
+		<link href="static/assets/img/favicon.png" rel="icon">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+
+		<!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="static/assets/plugins/fontawesome/css/fontawesome.min.css">
+		<link rel="stylesheet" href="static/assets/plugins/fontawesome/css/all.min.css">
+
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="static/assets/css/style.css">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="static/assets/js/html5shiv.min.js"></script>
+			<script src="static/assets/js/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- Header -->
+			<header class="header">
+				<nav class="navbar navbar-expand-lg header-nav">
+					<div class="main-menu-wrapper">
+						<ul class="main-nav">
+							<li class="active">
+								<a href="/">Heart Disease Prediction</a>
+							</li>
+							<li>
+								<a href="/adminlogin" target="_blank">Admin</a>
+							</li>
+<!--							<li class="login-link">-->
+<!--								<a href="/adminlogin">Admin Login</a>-->
+<!--							</li>-->
+						</ul>
+					</div>
+					<ul class="nav header-navbar-rht">
+						<li class="nav-item contact-item">
+							<div class="header-contact-img">
+								<i class="far fa-hospital"></i>
+							</div>
+							<div class="header-contact-detail">
+								<p class="contact-header">Contact</p>
+								<p class="contact-info-header"> +94 123-456789</p>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<!-- /Header -->
+
+              <h1>{{ d1 }}</h1>
+              <table class="table">
+                 <thead class="thead-dark">
+                    <tr>
+                       <th> Date </th>
+                       <th> Appointment number </th>
+                        <th>Time</th>
+                       <th>Name</th>
+                        <th>NIC</th>
+                        <th>Phone number</th>
+                        <th>Delete</th>
+                    </tr>
+                 </thead>
+
+                 <tbody>
+                    {% for booking1 in Day1 %}
+                       <tr>
+                           <td>{{ booking1.date.strftime("%A %d %B %Y") }}</td>
+                           <td>{{ booking1.appointnum }}</td>
+                          <td>{{ booking1.time }}</td>
+                          <td>{{ booking1.patientname }}</td>
+                          <td>{{ booking1.NIC }}</td>
+                           <td>{{ booking1.Phonenum }}</td>
+                           <td><form action="/delete" method=post class=delete-entry>
+    <input type="hidden" name="booking_id" value="{{ booking1.id }}">
+    <input type="submit" value="Delete" />
+</form>
+                                </td>
+                       </tr>
+                    {% endfor %}
+                 </tbody>
+
+              </table>
+
+                <hr><br>
+                <hr>
+                <h1>{{ d2 }}</h1>
+              <table class="table">
+                 <thead class="thead-dark">
+                    <tr>
+                       <th>Date</th>
+                       <th>Appointment number</th>
+                        <th>Time</th>
+                       <th>Name</th>
+                        <th>NIC</th>
+                        <th>Phone number</th>
+                        <th>Delete</th>
+                    </tr>
+                 </thead>
+
+                 <tbody>
+                    {% for booking in Day2 %}
+                       <tr>
+                           <td>{{ booking.date.strftime("%A %d %B %Y") }}</td>
+                           <td>{{ booking.appointnum }}</td>
+                          <td>{{ booking.time }}</td>
+                          <td>{{ booking.patientname }}</td>
+                          <td>{{ booking.NIC }}</td>
+                           <td>{{ booking.Phonenum }}</td>
+                           <td><form action="/delete" method=post class=delete-entry>
+    <input type="hidden" name="booking_id" value="{{ booking1.id }}">
+    <input type="submit" value="Delete" />
+</form>
+                                </td>
+
+                       </tr>
+                    {% endfor %}
+                 </tbody>
+
+              </table>
+
+                <hr><br>
+                <hr>
+                 <h1>{{ d3 }}</h1>
+              <table class="table">
+                 <thead class="thead-dark">
+                    <tr>
+                       <th>Date</th>
+                       <th>Appointment number</th>
+                        <th>Time</th>
+                       <th>Name</th>
+                        <th>NIC</th>
+                        <th>Phone number</th>
+                        <th>Delete</th>
+                    </tr>
+                 </thead>
+
+                 <tbody>
+                    {% for booking1 in Day3 %}
+                       <tr>
+                           <td>{{ booking1.date.strftime("%A %d %B %Y") }}</td>
+                           <td>{{ booking1.appointnum }}</td>
+                          <td>{{ booking1.time }}</td>
+                          <td>{{ booking1.patientname }}</td>
+                          <td>{{ booking1.NIC }}</td>
+                           <td>{{ booking1.Phonenum }}</td>
+                           <td><form action="/delete" method=post class=delete-entry>
+    <input type="hidden" name="booking_id" value="{{ booking1.id }}">
+    <input type="submit" value="Delete" />
+</form>
+                                </td>
+
+                       </tr>
+                    {% endfor %}
+                 </tbody>
+
+              </table>
+
+                <hr><br>
+                <hr>
+                <h1>{{ d4 }}</h1>
+                  <table class="table">
+                     <thead class="thead-dark">
+                        <tr>
+                           <th>Date</th>
+                           <th>Appointment number</th>
+                            <th>Time</th>
+                           <th>Name</th>
+                            <th>NIC</th>
+                            <th>Phone number</th>
+                            <th>Delete</th>
+                        </tr>
+                     </thead>
+
+                     <tbody>
+                        {% for booking1 in Day4 %}
+                           <tr>
+                               <td>{{ booking1.date.strftime("%A %d %B %Y") }}</td>
+                               <td>{{ booking1.appointnum }}</td>
+                              <td>{{ booking1.time }}</td>
+                              <td>{{ booking1.patientname }}</td>
+                              <td>{{ booking1.NIC }}</td>
+                               <td>{{ booking1.Phonenum }}</td>
+                               <td><form action="/delete" method=post class=delete-entry>
+    <input type="hidden" name="booking_id" value="{{ booking1.id }}">
+    <input type="submit" value="Delete" />
+</form>
+                                </td>
+
+                           </tr>
+                        {% endfor %}
+                     </tbody>
+
+                  </table>
+
+            <hr><br>
+                <hr>
+                 <h1>{{ d5 }}</h1>
+              <table class="table">
+                 <thead class="thead-dark">
+                    <tr>
+                       <th>Date</th>
+                       <th>Appointment number</th>
+                        <th>Time</th>
+                       <th>Name</th>
+                        <th>NIC</th>
+                        <th>Phone number</th>
+                        <th>Delete</th>
+                    </tr>
+                 </thead>
+
+                 <tbody>
+                    {% for booking1 in Day5 %}
+                       <tr>
+                           <td>{{ booking1.date.strftime("%A %d %B %Y") }}</td>
+                           <td>{{ booking1.appointnum }}</td>
+                          <td>{{ booking1.time }}</td>
+                          <td>{{ booking1.patientname }}</td>
+                          <td>{{ booking1.NIC }}</td>
+                           <td>{{ booking1.Phonenum }}</td>
+                           <td><form action="/delete" method=post class=delete-entry>
+    <input type="hidden" name="booking_id" value="{{ booking1.id }}">
+    <input type="submit" value="Delete" />
+</form>
+                                </td>
+
+                       </tr>
+                    {% endfor %}
+                 </tbody>
+
+              </table>
+
+                <hr><br>
+                <hr>
+                <h1>{{ d6 }}</h1>
+              <table class="table">
+                 <thead class="thead-dark">
+                    <tr>
+                       <th>Date</th>
+                       <th>Appointment number</th>
+                        <th>Time</th>
+                       <th>Name</th>
+                        <th>NIC</th>
+                        <th>Phone number</th>
+                        <th>Delete</th>
+                    </tr>
+                 </thead>
+
+                 <tbody>
+                    {% for booking1 in Day6 %}
+                       <tr>
+                           <td>{{ booking1.date.strftime("%A %d %B %Y") }}</td>
+                           <td>{{ booking1.appointnum }}</td>
+                          <td>{{ booking1.time }}</td>
+                          <td>{{ booking1.patientname }}</td>
+                          <td>{{ booking1.NIC }}</td>
+                           <td>{{ booking1.Phonenum }}</td>
+                           <td><form action="/delete" method=post class=delete-entry>
+    <input type="hidden" name="booking_id" value="{{ booking1.id }}">
+    <input type="submit" value="Delete" />
+</form>
+                                </td>
+
+                       </tr>
+                    {% endfor %}
+                 </tbody>
+
+              </table>
+
+                <hr><br>
+                <hr>
+                <h1>{{ d7 }}</h1>
+              <table class="table">
+                 <thead class="thead-dark">
+                    <tr>
+                       <th>Date</th>
+                       <th>Appointment number</th>
+                        <th>Time</th>
+                       <th>Name</th>
+                        <th>NIC</th>
+                        <th>Phone number</th>
+                        <th>Delete</th>
+                    </tr>
+                 </thead>
+
+                 <tbody>
+                    {% for booking1 in Day7 %}
+                       <tr>
+                           <td>{{ booking1.date.strftime("%A %d %B %Y") }}</td>
+                           <td>{{ booking1.appointnum }}</td>
+                          <td>{{ booking1.time }}</td>
+                          <td>{{ booking1.patientname }}</td>
+                          <td>{{ booking1.NIC }}</td>
+                           <td>{{ booking1.Phonenum }}</td>
+                           <td><form action="/delete" method=post class=delete-entry>
+    <input type="hidden" name="booking_id" value="{{ booking1.id }}">
+    <input type="submit" value="Delete" />
+</form>
+                                </td>
+
+                       </tr>
+                    {% endfor %}
+                 </tbody>
+
+              </table>
+            <br><br>
+
+<!-- Footer -->
+			<footer class="footer">
+
+				<!-- Footer Top -->
+				<div class="footer-top">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-3 col-md-8"></div>
+
+							<div class="col-lg-3 col-md-6">
+
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-contact">
+									<h2 class="footer-title">Contact Us</h2>
+									<div class="footer-contact-info">
+										<div class="footer-address">
+											<span><i class="fas fa-map-marker-alt"></i></span>
+											<p> 3556  Beech Street, Galle road,<br> Sri Lanka, CA 94108 </p>
+										</div>
+										<p>
+											<i class="fas fa-phone-alt"></i>
+											+94 123-456789
+										</p>
+									</div>
+								</div>
+								<!-- /Footer Widget -->
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- /Footer Top -->
+
+				<!-- Footer Bottom -->
+                <div class="footer-bottom">
+					<div class="container-fluid">
+
+						<!-- Copyright -->
+						<div class="copyright">
+							<div class="row">
+								<div class="col-md-6 col-lg-7">
+
+									<!-- Copyright Menu -->
+									<div class="copyright-menu">
+										<ul class="policy-menu">
+											<li><a href="term-condition.html">Terms and Conditions</a></li>
+											<li><a href="privacy-policy.html">Policy</a></li>
+										</ul>
+									</div>
+									<!-- /Copyright Menu -->
+
+								</div>
+							</div>
+						</div>
+						<!-- /Copyright -->
+
+					</div>
+				</div>
+				<!-- /Footer Bottom -->
+
+			</footer>
+			<!-- /Footer -->
+
+		</div>
+		<!-- /Main Wrapper -->
+
+		<!-- jQuery -->
+		<script src="assets/js/jquery.min.js"></script>
+
+		<!-- Bootstrap Core JS -->
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!-- Custom JS -->
+		<script src="assets/js/script.js"></script>
+
+	</body>
+
+<!-- doccure/booking-success.html  30 Nov 2019 04:12:16 GMT -->
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<title>Booking</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<link href="static/assets/img/favicon.png" rel="icon">
+		<link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/assets/plugins/fontawesome/css/fontawesome.min.css">
+		<link rel="stylesheet" href="static/assets/plugins/fontawesome/css/all.min.css">
+		<link rel="stylesheet" href="static/assets/css/style.css">
+
+	</head>
+	<body class="account-page">
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+            <!-- Header -->
+			<header class="header">
+				<nav class="navbar navbar-expand-lg header-nav">
+					<div class="main-menu-wrapper">
+						<ul class="main-nav">
+							<li class="active">
+								<a href="/">Heart Disease Prediction</a>
+							</li>
+							<li>
+								<a href="/adminlogin" target="_blank">Admin</a>
+							</li>
+<!--							<li class="login-link">-->
+<!--								<a href="/adminlogin">Admin Login</a>-->
+<!--							</li>-->
+						</ul>
+					</div>
+					<ul class="nav header-navbar-rht">
+						<li class="nav-item contact-item">
+							<div class="header-contact-img">
+								<i class="far fa-hospital"></i>
+							</div>
+							<div class="header-contact-detail">
+								<p class="contact-header">Contact</p>
+								<p class="contact-info-header"> +94 123-456789</p>
+							</div>
+						</li>
+<!--						<li class="nav-item">-->
+<!--							<a class="nav-link header-login" href="/adminlogin">Admin Login</a>-->
+<!--						</li>-->
+					</ul>
+				</nav>
+			</header>
+			<!-- /Header -->
+            <!-- Breadcrumb -->
+			<div class="breadcrumb-bar">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-12 col-12">
+							<nav aria-label="breadcrumb" class="page-breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Booking</li>
+								</ol>
+							</nav>
+							<h2 class="breadcrumb-title">Booking</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Breadcrumb -->
+
+            <!-- Page Content -->
+			<div class="content">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-12">
+
+							<div class="card">
+								<div class="card-body">
+                                    <div class="text-center">
+                                        <h1> Book your Date </h1>
+                                    </div>
+
+								</div>
+							</div>
+
+							<!-- Schedule Widget -->
+							<div class="card booking-schedule schedule-widget">
+
+								<!-- Schedule Header -->
+								<div class="schedule-header">
+									<div class="row">
+										<div class="col-md-12">
+
+											<!-- Day Slot -->
+											<div class="day-slot">
+												<ul>
+													<li>
+														<span><a href="./bookingd1" class="btn btn-primary submit-btn">{{ d1 }}</a></span>
+														<span>{{ d1.strftime("%A") }}</span>
+													</li>
+													<li>
+														<span><a href="./bookingd2" class="btn btn-primary submit-btn">{{ d2 }}</a></span>
+														<span>{{ d2.strftime("%A") }}</span>
+													</li>
+													<li>
+														<span><a href="./bookingd3" class="btn btn-primary submit-btn">{{ d3 }}</a></span>
+														<span>{{ d3.strftime("%A") }}</span>
+													</li>
+													<li>
+														<span><a href="./bookingd4" class="btn btn-primary submit-btn">{{ d4 }}</a></span>
+														<span>{{ d4.strftime("%A") }}</span>
+													</li>
+													<li>
+														<span><a href="./bookingd5" class="btn btn-primary submit-btn">{{ d5 }}</a></span>
+														<span>{{ d5.strftime("%A") }}</span>
+													</li>
+													<li>
+														<span><a href="./bookingd6" class="btn btn-primary submit-btn">{{ d6 }}</a></span>
+														<span>{{ d6.strftime("%A") }}</span>
+													</li>
+													<li>
+														<span><a href="./bookingd7" class="btn btn-primary submit-btn">{{ d7 }}</a></span>
+														<span>{{ d7.strftime("%A") }}</span>
+													</li>
+												</ul>
+											</div>
+											<!-- /Day Slot -->
+
+										</div>
+									</div>
+								</div>
+								<!-- /Schedule Header -->
+
+							</div>
+							<!-- /Schedule Widget -->
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- /Page Content -->
+
+            <!-- Footer -->
+			<footer class="footer">
+
+				<!-- Footer Top -->
+				<div class="footer-top">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-3 col-md-8"></div>
+
+							<div class="col-lg-3 col-md-6">
+
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-contact">
+									<h2 class="footer-title">Contact Us</h2>
+									<div class="footer-contact-info">
+										<div class="footer-address">
+											<span><i class="fas fa-map-marker-alt"></i></span>
+											<p> 3556  Beech Street, Galle road,<br> Sri Lanka, CA 94108 </p>
+										</div>
+										<p>
+											<i class="fas fa-phone-alt"></i>
+											+94 123-456789
+										</p>
+									</div>
+								</div>
+								<!-- /Footer Widget -->
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- /Footer Top -->
+
+				<!-- Footer Bottom -->
+                <div class="footer-bottom">
+					<div class="container-fluid">
+
+						<!-- Copyright -->
+						<div class="copyright">
+							<div class="row">
+								<div class="col-md-6 col-lg-7">
+
+									<!-- Copyright Menu -->
+									<div class="copyright-menu">
+										<ul class="policy-menu">
+											<li><a href="term-condition.html">Terms and Conditions</a></li>
+											<li><a href="privacy-policy.html">Policy</a></li>
+										</ul>
+									</div>
+									<!-- /Copyright Menu -->
+
+								</div>
+							</div>
+						</div>
+						<!-- /Copyright -->
+
+					</div>
+				</div>
+				<!-- /Footer Bottom -->
+
+			</footer>
+			<!-- /Footer -->
+		</div>
+		<!-- /Main Wrapper -->
+
+		<!-- jQuery -->
+		<script src="static/assets/js/jquery.min.js"></script>
+
+		<!-- Bootstrap Core JS -->
+		<script src="static/assets/js/popper.min.js"></script>
+		<script src="static/assets/js/bootstrap.min.js"></script>
+
+		<!-- Custom JS -->
+		<script src="static/assets/js/script.js"></script>
+
+	</body>
+</html>
